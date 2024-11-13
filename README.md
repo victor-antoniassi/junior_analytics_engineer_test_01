@@ -1,29 +1,29 @@
-# Teste prático de contratação de Analytics Engineer Júnior | Empresa de E-Commerce
+# Junior Analytics Engineer Technical Test | E-Commerce Company
 
-## Aviso
+## Notice
 
-Este repositório contém a minha solução para o teste prático realizado durante um processo seletivo para o cargo de **Analytics Engineer Júnior** em uma empresa de e-commerce. Algumas partes do texto original da proposta foram omitidas ou modificadas para manter a confidencialidade do processo seletivo.
+This repository contains my solution for the technical test conducted during a selection process for a **Junior Analytics Engineer** position at an e-commerce company. Some parts of the original proposal text have been omitted or modified to maintain the confidentiality of the selection process.
 
-## Resumo da proposta do teste (leia a proposta completa [aqui](proposta_desafio_tecnico.md))
+## Test Proposal Summary (read the complete proposal [here](proposta_desafio_tecnico.md))
 
-Este é um desafio prático para o processo seletivo de Analytics Engineer Júnior em uma empresa de e-commerce. O cenário envolve o planejamento para o início do ano letivo escolar na cidade de São Paulo, com foco na venda de produtos do setor de materiais escolares. O objetivo do desafio é desenvolver um projeto simplificado de preparação de dados para entregar um banco de dados que será utilizado em análises e outros projetos durante o planejamento de vendas. Os dados devem ser disponibilizados em uma estrutura e qualidade semelhantes à camada Silver da Arquitetura Medallion. Os dados para o desafio incluem informações agregadas de estudantes e detalhes sobre as escolas. Importante: utilize apenas os dados de perfis de alunos e escolas da cidade de São Paulo referentes aos anos de 2021 e 2022.
+This is a practical challenge for the Junior Analytics Engineer selection process at an e-commerce company. The scenario involves planning for the beginning of the school year in São Paulo city, focusing on selling school supplies. The challenge aims to develop a simplified data preparation project to deliver a database that will be used in analyses and other projects during sales planning. The data should be made available in a structure and quality similar to the Silver layer of the Medallion Architecture. The data for the challenge includes aggregated student information and details about schools. Important: use only student profiles and school data from São Paulo city for the years 2021 and 2022.
 
-## Etapas da minha solução de Preparação de Dados
+## Steps of my Data Preparation Solution
 
-1. Análise inicial da qualidade dos dados e das estruturas dos arquivos .csv utilizando o Python + Pandas e Google Sheets.
-2. Desenvolvimento de um [script](data_preparation/scripts/compare_delimited_file_headers) em Python para comparar os cabeçalhos dos arquivos (educandos e escolas) com cabeçalhos corretos baseados nos respectivos dicionários de dados.
-3. Correção manual dos problemas identificados utilizando o Google Sheets (correção nos nomes dos campos, mudança de posições das colunas para posições corretas e exclusão de colunas totalmente vazias ou que não existem no dicionários de dados).
-4. Desenvolvimento de um [script](data_preparation/scripts/datasets_to_sqlite) em Python que aplica algumas etapas de preparação/limpeza nos dados, necessário para os dados serem armazenados de forma correta no banco de dados SQLite.
-5. Desenvolvimento de um [script](data_preparation/scripts/datasets_to_sqlite) em Python que cria o [banco de dados SQLite](sqlite_db) e que faz a ingestão de dados dos arquivos para as tabelas 'educandos' (dados dos perfis de alunos matriculados nos anos de 2021 e 2022), 'escolas' (dados sobre as escolas municipais referente aos anos de 2021 e 2022) e 'escolas_educandos' (tabela que faz a junção das tabelas 'escolas' e 'educandos').
+1. Initial analysis of data quality and CSV file structures using Python + Pandas and Google Sheets.
+2. Development of a [script](data_preparation/scripts/compare_delimited_file_headers) in Python to compare file headers (students and schools) with correct headers based on their respective data dictionaries.
+3. Manual correction of identified issues using Google Sheets (correction of field names, changing column positions to correct positions, and deletion of completely empty columns or columns that don't exist in the data dictionaries).
+4. Development of a [script](data_preparation/scripts/datasets_to_sqlite) in Python that applies some data preparation/cleaning steps necessary for the data to be correctly stored in the SQLite database.
+5. Development of a [script](data_preparation/scripts/datasets_to_sqlite) in Python that creates the [SQLite database](sqlite_db) and performs data ingestion from files to the tables 'educandos' (data from student profiles enrolled in 2021 and 2022), 'escolas' (data about municipal schools for the years 2021 and 2022) and 'escolas_educandos' (table that joins the 'escolas' and 'educandos' tables).
 
-## Sugestões de Análises
+## Analysis Suggestions
 
-1. **Análise Demográfica**: Analisar a distribuição dos alunos com base em características demográficas, como raça, gênero e idade. Isso pode ajudar a empresa a entender melhor a diversidade de seus clientes potenciais e a desenvolver produtos que atendam às necessidades de diferentes grupos demográficos.
+1. **Demographic Analysis**: Analyze student distribution based on demographic characteristics such as race, gender, and age. This can help the company better understand the diversity of their potential customers and develop products that meet the needs of different demographic groups.
 
-2. **Análise de Necessidades Educacionais Especiais**: Analisar a distribuição de alunos com necessidades educacionais especiais. Isso pode ajudar a empresa a desenvolver produtos específicos para esse segmento, o que pode ser uma consideração importante para muitos pais.
+2. **Special Educational Needs Analysis**: Analyze the distribution of students with special educational needs. This can help the company develop specific products for this segment, which can be an important consideration for many parents.
 
-3. **Análise de Tendências**: Comparar os dados de 2021 e 2022 para identificar tendências. Isso pode ajudar a empresa a prever a demanda futura e a se preparar adequadamente para atender às necessidades dos pais.
+3. **Trend Analysis**: Compare data from 2021 and 2022 to identify trends. This can help the company predict future demand and prepare adequately to meet parents' needs.
 
-4. **Análise de Cluster**: Agrupar escolas com base em características semelhantes (como localização e tamanho) e analisar as diferenças nas tendências de vendas entre os diferentes grupos. Isso pode ajudar a empresa a entender melhor as necessidades específicas de diferentes comunidades escolares.
+4. **Cluster Analysis**: Group schools based on similar characteristics (such as location and size) and analyze sales trend differences between different groups. This can help the company better understand the specific needs of different school communities.
 
-5. **Análise de Segmentação de Mercado**: Identificar segmentos de mercado com base nas características dos alunos e das escolas. Isso pode ajudar a empresa a personalizar seus produtos e estratégias de marketing para diferentes segmentos, permitindo que ela atenda melhor às necessidades dos pais.
+5. **Market Segmentation Analysis**: Identify market segments based on student and school characteristics. This can help the company customize its products and marketing strategies for different segments, allowing it to better meet parents' needs.
