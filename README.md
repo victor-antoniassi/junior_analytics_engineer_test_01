@@ -1,10 +1,10 @@
 # School Supplies Market Data Preparation
 
-Project developed to process and structure student and school data from São Paulo city into a SQLite database for e-commerce sales planning.
+Solution built for a Junior Analytics Engineer technical assessment. Read the complete challenge proposal [here](technical_challenge_proposal.md).
 
 ## 📊 About
 
-Solution developed for a technical assessment that prepared educational data following Silver layer standards of the Medallion Architecture. The project processed data from:
+Solution developed for a technical assessment that prepared educational data. The project processed data from:
 - Student profiles (2021-2022)
 - School information (2021-2022)
 - São Paulo city only
